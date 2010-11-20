@@ -41,7 +41,7 @@ fi
 result=`"$FLASHCOMMAND" -e -s "$FLA" -o "$SWF"`
 
 #flashcommand output is very dirty and windoze like. Let's format it!
-"${TM_RUBY:-ruby}" "${TM_BUNDLE_SUPPORT}/formatBuildInFlashOutput.rb" "$result"
+ruby "${TM_BUNDLE_SUPPORT}/formatBuildInFlashOutput.rb" "$result"
 
 if [ "$?" == 0 ]
 then
