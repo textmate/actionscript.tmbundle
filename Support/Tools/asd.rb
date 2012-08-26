@@ -87,7 +87,7 @@ def find_matching_lines
           search_results[section] = []
         end
         xml_line = REXML::Document.new(line.strip)
-        search_results[section] << "<li><a href=\"tm-file://#{path}/#{xml_line.root.attributes['href']}\">#{xml_line.root.attributes['name']}</a></li>"
+        search_results[section] << "<li><a href=\"file://#{path}/#{xml_line.root.attributes['href']}\">#{xml_line.root.attributes['name']}</a></li>"
       end
     end
   end
