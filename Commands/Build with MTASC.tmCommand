@@ -5,18 +5,31 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string>ruby "$TM_BUNDLE_SUPPORT/Tools/build_with_mtasc.rb"</string>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+ruby "$TM_BUNDLE_SUPPORT/Tools/build_with_mtasc.rb"</string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@r</string>
 	<key>name</key>
 	<string>Build With MTASC</string>
-	<key>output</key>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
 	<string>discard</string>
 	<key>scope</key>
 	<string>source.actionscript.2</string>
+	<key>semanticClass</key>
+	<string>process.run.actionscript</string>
 	<key>uuid</key>
 	<string>E0105691-3033-43C1-A4A2-4C2785446748</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

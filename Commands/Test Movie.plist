@@ -5,21 +5,34 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string># assumes the .FLA file is already open
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+# assumes the .FLA file is already open
 
 echo "flash.getDocumentDOM().testMovie()" &gt; /tmp/test.jsfl;
 open /tmp/test.jsfl;</string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@r</string>
 	<key>name</key>
 	<string>Test Movie</string>
-	<key>output</key>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
 	<string>discard</string>
 	<key>scope</key>
 	<string>source.actionscript.2</string>
+	<key>semanticClass</key>
+	<string>process.external.run.actionscript</string>
 	<key>uuid</key>
 	<string>BE332E85-83B1-11D9-AD5A-000A95C5F126</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

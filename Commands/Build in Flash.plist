@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string># In order to use this command, you need this to install flashcommand:
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+# In order to use this command, you need this to install flashcommand:
 # http://www.markme.com/mesh/archives/004419.cfm
 #
 #
@@ -66,17 +69,27 @@ fi</string>
 	<string>2</string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@b</string>
 	<key>lineCaptureRegister</key>
 	<string>3</string>
 	<key>name</key>
 	<string>Build in Flash</string>
-	<key>output</key>
-	<string>showAsHTML</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
 	<key>scope</key>
 	<string>source.actionscript.2</string>
+	<key>semanticClass</key>
+	<string>process.build.actionscript</string>
 	<key>uuid</key>
 	<string>2197A196-78E3-11D9-8177-000A95C5F126</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
